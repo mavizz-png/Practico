@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca</title>
+    
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="C:\Users\viazz\OneDrive\Desktop\Programación\Practico\front\dist\css\style.css">
+    <link rel="stylesheet" href="./dist/css/style.css">
 
     <!-- Iconos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -18,7 +23,7 @@
     <main>
 
 <!-- BARRA -->
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light">
     <div class="container">
         <a class="navbar-brand fw-bold" href="#"></a>
 
@@ -32,316 +37,187 @@
 <!-- HERO -->
 <section class="container text-center my-5">
 
-    <h1>Biblioteca Digital</h1>
+    <div class="titulo">Biblioteca Digital
+    <i class="bi bi-book-half"></i>
+</div>
+    <h3 class="subtitulo">¿Qué desea leer hoy?</h3>
 
-    <div class="input-group w-50 mx-auto mt-4">
+    <div class="input-group mx-auto mt-4 buscador">
 
         <input
-            type="text"
-            class="form-control"
-            placeholder="Buscar...">
+        type="text"
+        class="form-control"
+        placeholder="Buscar...">
 
-        <button class="btn btn-danger">
-            Buscar
-        </button>
+    <button class="btn btn-outline-secondary">
+        <i class="bi bi-search"></i>
+    </button>
 
     </div>
 
 </section>
 
 <!-- CATEGORÍAS -->
-<section class="container text-center mb-5">
+<section class="container mb-5">
+     <div class="d-flex flex-wrap justify-content-center gap-2">
 
-    <button class="btn categoria-btn m-1">Cuentos Infantiles</button>
-    <button class="btn categoria-btn m-1">Historia</button>
-    <button class="btn categoria-btn m-1">Acción</button>
-    <button class="btn categoria-btn m-1">Misterio</button>
-    <button class="btn categoria-btn m-1">Terror</button>
-    <button class="btn categoria-btn m-1">Literatura clásica</button>
-
+    <button class="btn btn-outline-dark m-1">Cuentos Infantiles</button>
+    <button class="btn btn-outline-dark m-1">Historia</button>
+    <button class="btn btn-outline-dark m-1">Acción</button>
+    <button class="btn btn-outline-dark m-1">Misterio</button>
+    <button class="btn btn-outline-dark m-1">Terror</button>
+    <button class="btn btn-outline-dark m-1">Literatura clásica</button>
+</div>
 </section>
 
 <!-- PRODUCTOS -->
 <section class="container">
-     <div class="d-flex justify-content-between align-items-center mb-4">
-    <h2 class="mb-4">Destacados</h2>
-    <button class="btn btn-outline-info">
-            Ver más
-        </button>
-        </div>
 
-    <div class="row g-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Destacados</h2>
+
+       <a href="catalogo.html" class="btn btn-outline-dark">
+    Ver más
+</a>
+    </div>
+
+    <div class="libros">
 
         <!-- Card 1 -->
-        <div class="col-md-3 mb-3">
+        <div class="card libro-card">
+            <img src="https://i.pinimg.com/1200x/44/49/fa/4449fa8105c957a2cea0f41fd3b60d5c.jpg" class="card-img-top">
 
-            <div class="card h-20">
+            <div class="overlay">
+                <button class="icono-btn">
+                    <i class="bi bi-eye-fill"></i>
+                </button>
 
-                <img src="https://i.pinimg.com/1200x/44/49/fa/4449fa8105c957a2cea0f41fd3b60d5c.jpg"
-                    class="card-img-top">
-
-                <div class="card-body">
-
-                    <h5 class="card-title">El Principito</h5>
-
-                    <p class="card-text">
-                        Libro infantil
-                    </p>
-
-                    <button class="btn btn-primary">
-                        Ver más
-                    </button>
-
-                     <button class="btn btn-success">
-        <i class="bi bi-cart-plus"></i>
-        Agregar al carrito
-    </button>
-
-                </div>
-
+                <button class="icono-carrito">
+                    <i class="bi bi-cart-plus-fill"></i>
+                </button>
             </div>
-
         </div>
 
         <!-- Card 2 -->
-        <div class="col-md-3 mb-3">
+        <div class="card libro-card">
+            <img src="https://content.nationalgeographic.com.es/medio/2025/01/21/ng01-25-portada2_21bea86f_250121110712_1280x1859.webp" class="card-img-top">
 
-            <div class="card h-20">
+            <div class="overlay">
+                <button class="icono-btn">
+                    <i class="bi bi-eye-fill"></i>
+                </button>
 
-                <img src="https://content.nationalgeographic.com.es/medio/2025/01/21/ng01-25-portada2_21bea86f_250121110712_1280x1859.webp"
-                    class="card-img-top">
-
-                <div class="card-body">
-
-                    <h5 class="card-title">
-                        National Geographic
-                    </h5>
-
-                    <p class="card-text">
-                        Revista
-                    </p>
-
-                    <button class="btn btn-primary">
-                        Ver más
-                    </button>
-
-                     <button class="btn btn-success">
-        <i class="bi bi-cart-plus"></i>
-        Agregar al carrito
-    </button>
-
-                </div>
-
+                <button class="icono-carrito">
+                    <i class="bi bi-cart-plus-fill"></i>
+                </button>
             </div>
-
         </div>
 
         <!-- Card 3 -->
-        <div class="col-md-3 mb-3">
+        <div class="card libro-card">
+            <img src="https://images.cdn3.buscalibre.com/fit-in/360x360/e7/11/e711f3b8573b390d9c0a040568112be8.jpg" class="card-img-top">
 
-            <div class="card h-20">
+            <div class="overlay">
+                <button class="icono-btn">
+                    <i class="bi bi-eye-fill"></i>
+                </button>
 
-                <img src="https://images.cdn3.buscalibre.com/fit-in/360x360/e7/11/e711f3b8573b390d9c0a040568112be8.jpg"
-                    class="card-img-top">
-
-                <div class="card-body">
-
-                    <h5 class="card-title">
-                        Sherlock Holmes
-                    </h5>
-
-                    <p class="card-text">
-                        Audiolibro
-                    </p>
-
-                    <button class="btn btn-primary">
-                        Ver más
-                    </button>
-
-                     <button class="btn btn-success">
-        <i class="bi bi-cart-plus"></i>
-        Agregar al carrito
-    </button>
-
-                </div>
-
+                <button class="icono-carrito">
+                    <i class="bi bi-cart-plus-fill"></i>
+                </button>
             </div>
-
         </div>
 
         <!-- Card 4 -->
-        <div class="col-md-3 mb-3">
+        <div class="card libro-card">
+            <img src="https://preview.redd.it/what-are-some-of-the-best-nightwing-covers-in-your-opinion-v0-1d8ik4xqgeve1.jpeg?auto=webp&s=d70dc211c0f66db5aa8059064a77679ed4971d96" class="card-img-top">
 
-            <div class="card h-20">
+            <div class="overlay">
+                <button class="icono-btn">
+                    <i class="bi bi-eye-fill"></i>
+                </button>
 
-                <img src="https://preview.redd.it/what-are-some-of-the-best-nightwing-covers-in-your-opinion-v0-1d8ik4xqgeve1.jpeg?auto=webp&s=d70dc211c0f66db5aa8059064a77679ed4971d96"
-                    class="card-img-top">
-
-                <div class="card-body">
-
-                    <h5 class="card-title">Nightwing #106</h5>
-
-                    <p class="card-text">
-                        Cómic
-                    </p>
-
-                    <button class="btn btn-primary">
-                        Ver más
-                    </button>
-
-                     <button class="btn btn-success">
-        <i class="bi bi-cart-plus"></i>
-        Agregar al carrito
-    </button>
-
-                </div>
-
+                <button class="icono-carrito">
+                    <i class="bi bi-cart-plus-fill"></i>
+                </button>
             </div>
-
         </div>
-        
 
     </div>
 
 </section>
+
 <section class="container">
-     <div class="d-flex justify-content-between align-items-center mb-4">
-    <h2 class="mb-4">Agregados Recientemente</h2>
-    <button class="btn btn-outline-info">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Agregados Recientemente</h2>
+
+        <button class="btn btn-outline-dark">
             Ver más
         </button>
-        </div>
+    </div>
 
-    <div class="row g-4">
+    <div class="libros">
 
-        <!-- Card 5 -->
-        <div class="col-md-3 mb-3">
+        <!-- Card 5-->
+        <div class="card libro-card">
+            <img src="https://cdnx.jumpseller.com/shazam-online/image/65293357/d9c22fe784284fc2a9bf49e4a0bb9cff.jpg?1752259939" class="card-img-top">
 
-            <div class="card h-20">
+            <div class="overlay">
+                <button class="icono-btn">
+                    <i class="bi bi-eye-fill"></i>
+                </button>
 
-                <img src="https://cdnx.jumpseller.com/shazam-online/image/65293357/d9c22fe784284fc2a9bf49e4a0bb9cff.jpg?1752259939"
-                    class="card-img-top">
-
-                <div class="card-body">
-
-                    <h5 class="card-title">Batman Absolute</h5>
-
-                    <p class="card-text">
-                        Cómic
-                    </p>
-
-                    <button class="btn btn-primary">
-                        Ver más
-                    </button>
-
-                     <button class="btn btn-success">
-        <i class="bi bi-cart-plus"></i>
-        Agregar al carrito
-    </button>
-
-                </div>
-
+                <button class="icono-carrito">
+                    <i class="bi bi-cart-plus-fill"></i>
+                </button>
             </div>
-
         </div>
 
         <!-- Card 6 -->
-        <div class="col-md-3 mb-3">
+        <div class="card libro-card">
+            <img src="https://images.cdn1.buscalibre.com/fit-in/360x360/ca/ce/caceac5bbb0c794b921e63ce552193d0.jpg" class="card-img-top">
 
-            <div class="card h-20">
+            <div class="overlay">
+                <button class="icono-btn">
+                    <i class="bi bi-eye-fill"></i>
+                </button>
 
-                <img src="https://images.cdn1.buscalibre.com/fit-in/360x360/ca/ce/caceac5bbb0c794b921e63ce552193d0.jpg"
-                    class="card-img-top">
-
-                <div class="card-body">
-
-                    <h5 class="card-title">
-                        Noches Blancas
-                    </h5>
-
-                    <p class="card-text">
-                        Libro
-                    </p>
-
-                    <button class="btn btn-primary">
-                        Ver más
-                    </button>
-
-                     <button class="btn btn-success">
-        <i class="bi bi-cart-plus"></i>
-        Agregar al carrito
-    </button>
-
-                </div>
-
+                <button class="icono-carrito">
+                    <i class="bi bi-cart-plus-fill"></i>
+                </button>
             </div>
-
         </div>
 
         <!-- Card 7 -->
-        <div class="col-md-3 mb-3">
+        <div class="card libro-card">
+            <img src="https://images.cdn3.buscalibre.com/fit-in/360x360/72/06/72068da1180de7423fecea52e5f4b68e.jpg" class="card-img-top">
 
-            <div class="card h-20">
+            <div class="overlay">
+                <button class="icono-btn">
+                    <i class="bi bi-eye-fill"></i>
+                </button>
 
-                <img src="https://images.cdn3.buscalibre.com/fit-in/360x360/72/06/72068da1180de7423fecea52e5f4b68e.jpg"
-                    class="card-img-top">
-
-                <div class="card-body">
-
-                    <h5 class="card-title">
-                        El fantasma de la opera
-                    </h5>
-
-                    <p class="card-text">
-                        Libro
-                    </p>
-
-                    <button class="btn btn-primary">
-                        Ver más
-                    </button>
-
-                     <button class="btn btn-success">
-        <i class="bi bi-cart-plus"></i>
-        Agregar al carrito
-    </button>
-
-                </div>
-
+                <button class="icono-carrito">
+                    <i class="bi bi-cart-plus-fill"></i>
+                </button>
             </div>
-
         </div>
 
         <!-- Card 8 -->
-        <div class="col-md-3 mb-3">
+        <div class="card libro-card">
+            <img src="https://images.cdn2.buscalibre.com/fit-in/360x360/de/23/de2322c8e7dc279ecc7ddfa8213193e3.jpg" class="card-img-top">
 
-            <div class="card h-20">
+            <div class="overlay">
+                <button class="icono-btn">
+                    <i class="bi bi-eye-fill"></i>
+                </button>
 
-                <img src="https://images.cdn2.buscalibre.com/fit-in/360x360/de/23/de2322c8e7dc279ecc7ddfa8213193e3.jpg"
-                    class="card-img-top">
-
-                <div class="card-body">
-
-                    <h5 class="card-title">One punch man 11</h5>
-
-                    <p class="card-text">
-                        Manga
-                    </p>
-
-                    <button class="btn btn-primary">
-                        Ver más
-                    </button>
-
-                     <button class="btn btn-success">
-        <i class="bi bi-cart-plus"></i>
-        Agregar al carrito
-    </button>
-
-                </div>
-
+                <button class="icono-carrito">
+                    <i class="bi bi-cart-plus-fill"></i>
+                </button>
             </div>
-
         </div>
-        
 
     </div>
 
@@ -352,8 +228,60 @@
     <span class="contador">0</span>
 </div>
 
-             <footer class="bg-dark text-white text-center p-3 mt-5">
-    Biblioteca Digital © 2026
+           <footer class="bg-dark text-white mt-5 py-4">
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Logo -->
+            <div class="col-md-4 mb-3">
+                <h4>
+                    <i class="bi bi-book-half"></i>
+                    Biblioteca Digital
+                </h4>
+
+                <p class="text-secondary">
+                    Tu biblioteca online con libros, cómics, mangas y revistas.
+                </p>
+            </div>
+
+            <!-- Enlaces -->
+            <div class="col-md-4 mb-3">
+                <h5>Enlaces</h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+                    <li><a href="catalogo.html" class="text-white text-decoration-none">Catálogo</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Redes -->
+            <div class="col-md-4 mb-3">
+                <h5>Seguinos</h5>
+
+                <a href="#" class="text-white me-3">
+                    <i class="bi bi-facebook fs-4"></i>
+                </a>
+
+                <a href="#" class="text-white me-3">
+                    <i class="bi bi-instagram fs-4"></i>
+                </a>
+
+                <a href="#" class="text-white">
+                    <i class="bi bi-twitter-x fs-4"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <hr class="border-secondary">
+
+        <p class="text-center mb-0">
+            © 2026 Biblioteca Digital - Todos los derechos reservados.
+        </p>
+
+    </div>
 </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
